@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<button id="test">提交</button>
+<script>
+   $(function () {
+       $('#test').on('click',function () {
+           $.ajax({
+               url:'http://localhost:8080/login',
+               type:'GET',
+               success:function (data) {
+                   console.log(data);
+               },
+               error:function (err) {
+                   console.log(err);
+               }
+           })
+       })
+   })
+</script>
+</body>
+</html>
